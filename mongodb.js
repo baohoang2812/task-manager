@@ -44,7 +44,7 @@ mongoClient.connect(connectionURL, { useNewUrlParser: true }, (err, client) => {
   //       console.log(result.ops);
   //     }
   //   );
-  //insert task
+  // Insert task
   //   db.collection("tasks").insertMany(
   //     [
   //       {
@@ -67,4 +67,76 @@ mongoClient.connect(connectionURL, { useNewUrlParser: true }, (err, client) => {
   //       console.log(result.ops);
   //     }
   //   );
+  // Find One
+  //   db.collection("users").findOne(
+  //     { _id: new ObjectID("60b4c2b0a7778949603863af") },
+  //     (err, result) => {
+  //       console.log(result);
+  //     }
+  //   );
+  // Find
+  //   db.collection("tasks")
+  //     .find({ completed: true })
+  //     .toArray((err, result) => {
+  //       console.log(result);
+  //     });
+  // Update one
+  //   db.collection("users")
+  //     .updateOne(
+  //       {
+  //         _id: new ObjectID("60b4c2b0a7778949603863af"),
+  //       },
+  //       {
+  //         $set: {
+  //           name: "Mike",
+  //         },
+  //       }
+  //     )
+  //     .then((result) => {
+  //       console.log(result);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+
+  // update many
+  //   db.collection("tasks")
+  //     .updateMany(
+  //       {
+  //         completed: true,
+  //       },
+  //       {
+  //         $set: {
+  //           completed: false,
+  //         },
+  //       }
+  //     )
+  //     .then((result) => {
+  //       console.log(result);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // Delete Many
+  //   db.collection("users")
+  //     .deleteMany({
+  //       age: 22,
+  //     })
+  //     .then((result) => {
+  //       console.log(result);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // Delete One
+  // db.collection("tasks")
+  //   .deleteOne({
+  //     description: "Bug FE",
+  //   })
+  //   .then((result) => {
+  //     console.log(result);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
 });
